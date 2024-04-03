@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CloudProviders", "CloudProviders\CloudProviders.csproj", "{EC8FA361-3A9E-47BB-BFA2-4F42945219C7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CloudProvidersTests", "CloudProvidersTests\CloudProvidersTests.csproj", "{3A6E4207-DE72-4CA7-A546-B81200B58489}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APIClients", "APIClients\APIClients.csproj", "{729F6E7E-ADB7-40DC-82E9-84387051CEE0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APIClientsTests", "APIClientsTests\APIClientsTests.csproj", "{451FA03F-FEF9-4311-AE2D-A1C275114C64}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EC8FA361-3A9E-47BB-BFA2-4F42945219C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC8FA361-3A9E-47BB-BFA2-4F42945219C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC8FA361-3A9E-47BB-BFA2-4F42945219C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC8FA361-3A9E-47BB-BFA2-4F42945219C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A6E4207-DE72-4CA7-A546-B81200B58489}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A6E4207-DE72-4CA7-A546-B81200B58489}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A6E4207-DE72-4CA7-A546-B81200B58489}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A6E4207-DE72-4CA7-A546-B81200B58489}.Release|Any CPU.Build.0 = Release|Any CPU
+		{729F6E7E-ADB7-40DC-82E9-84387051CEE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{729F6E7E-ADB7-40DC-82E9-84387051CEE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{729F6E7E-ADB7-40DC-82E9-84387051CEE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{729F6E7E-ADB7-40DC-82E9-84387051CEE0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{451FA03F-FEF9-4311-AE2D-A1C275114C64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{451FA03F-FEF9-4311-AE2D-A1C275114C64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{451FA03F-FEF9-4311-AE2D-A1C275114C64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{451FA03F-FEF9-4311-AE2D-A1C275114C64}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

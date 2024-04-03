@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <RootNamespace>Ebersoft.UtilitiesLibrary.CloudProviders</RootNamespace>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <PackageId>Ebersoft.UtilitiesLibrary.CloudProviders</PackageId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="CacheProvider\" />
+    <Folder Include="SecretProvider\" />
+    <Folder Include="SqlProvider\" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <EnablePackageValidation>true</EnablePackageValidation>
+    <PackageValidationBaselineVersion>1.0.0</PackageValidationBaselineVersion>
+  </PropertyGroup>
+
+</Project>
