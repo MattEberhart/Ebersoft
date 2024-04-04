@@ -1,9 +1,9 @@
-name: .NET Build, Test, and Publish Nuget Package
+name: Publish Cloud Providers Nuget
 
 on:
   push:
     branches:
-      - "main"
+      - "release/cloudproviders/*"
 
 defaults:
   run:
