@@ -1,0 +1,40 @@
+name: .NET Build, Test, and Publish Nuget Package
+
+on:
+  push:
+    branches:
+      - "main"
+
+defaults:
+  run:
+    working-directory: CloudProviders
+    
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Install xmlstarlet
+      run: sudo apt-get update && sudo apt-get install -y xmlstarlet
+    - name: Set Version Variable
+      run: |
+        csproj_path=$(find . -name '*.csproj')
+        VERSION=$(xmlstarlet sel -t -v "Project/PropertyGroup/Version" $csproj_path)
+        echo "VERSION=${VERSION}" >> $GITHUB_ENV
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v2
+      with:
+        dotnet-version: 8.0.x
+    - name: Restore dependencies
+      run: dotnet restore
+    - name: Build
+      run: dotnet build -c Release --no-restore /p:Version=$VERSION
+    - name: Test
+      run: dotnet test --no-build --verbosity normal
+    - name: pack nuget packages
+      run: dotnet pack --output nupkgs --no-restore --no-build /p:PackageVersion=$VERSION
+    - name: Publish NuGet package
+      run: |
+        set +e
+        dotnet nuget push nupkgs/*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json || { echo "Failed to publish NuGet package. The package with the same version already exists."; exit 0; }
+        set -e

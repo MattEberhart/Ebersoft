@@ -1,22 +1,25 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <RootNamespace>Ebersoft.UtilitiesLibrary.CloudProviders</RootNamespace>
+    <RootNamespace>Ebersoft.CloudProviders</RootNamespace>
     <TargetFramework>net8.0</TargetFramework>
+    <PackageId>Ebersoft.CloudProviders</PackageId>
+    <Version>0.0.2</Version>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <PackageId>Ebersoft.UtilitiesLibrary.CloudProviders</PackageId>
+    <Title>Cloud Providers</Title>
+    <Authors>Matt Eberhart</Authors>
   </PropertyGroup>
 
   <ItemGroup>
     <Folder Include="CacheProvider\" />
     <Folder Include="SecretProvider\" />
-    <Folder Include="SqlProvider\" />
   </ItemGroup>
 
-  <PropertyGroup>
-    <EnablePackageValidation>true</EnablePackageValidation>
-    <PackageValidationBaselineVersion>1.0.0</PackageValidationBaselineVersion>
-  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Azure.Identity" Version="1.11.0-beta.1" />
+    <PackageReference Include="Azure.Security.KeyVault.Secrets" Version="4.6.0" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.6" />
+  </ItemGroup>
 
 </Project>
